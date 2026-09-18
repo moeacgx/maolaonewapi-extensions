@@ -1,0 +1,54 @@
+{
+  "channel-quality": {
+    "0.4.1": {
+      "status": "builtin-snapshot",
+      "compatibility": "内置快照；需要 MaoLaoNewAPI 渠道可观测性接口及 native v1，清单下限 .204。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi",
+        "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+        "path": "extension/builtin/channel-quality",
+        "working_tree": false
+      },
+      "verification": "清单、双模板资源、ZIP 安装器验证；完整行为依赖宿主。"
+    }
+  },
+  "conversation-archive": {
+    "0.1.1": {
+      "status": "builtin-snapshot",
+      "compatibility": "内置快照；需要对话归档后端、数据库和 native v1，清单下限 .204。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi",
+        "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+        "path": "extension/builtin/conversation-archive",
+        "working_tree": false
+      },
+      "verification": "清单、双模板资源、ZIP 安装器验证；完整行为依赖宿主。"
+    }
+  },
+  "okx-alipay-rate": {
+    "0.3.0": {
+      "status": "builtin-snapshot",
+      "compatibility": "内置快照；需要报价/配置与 OKPay 宿主支持和 native v1；清单 .155 不能代表旧 SDK 支持。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi",
+        "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+        "path": "extension/builtin/okx-alipay-rate",
+        "working_tree": false
+      },
+      "verification": "清单、双模板资源、ZIP 安装器验证；完整行为依赖宿主。"
+    }
+  },
+  "upstream-model-guard": {
+    "0.2.0": {
+      "status": "requires-host-upgrade",
+      "compatibility": "外置开发版；需要 guard 与 tolerance 两能力及数据库迁移，正式 .326/.326.guard.1 不支持本版容错。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi",
+        "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+        "path": "extensions/upstream-model-guard",
+        "working_tree": true
+      },
+      "verification": "本地 Go/双模板回归、旧 SQLite 升级与真实 ZIP 上传验证；尚未生产部署。"
+    }
+  }
+}

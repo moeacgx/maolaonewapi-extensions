@@ -1,0 +1,24 @@
+{
+  "id": "conversation-archive",
+  "name": "对话归档",
+  "version": "0.1.1",
+  "description": "按分组和用户筛选保存清洗后的对话，并在线预览用于安全排查。",
+  "host": {
+    "min": "v1.0.0-rc.10.1.10.204"
+  },
+  "capabilities": [
+    "ui.native"
+  ],
+  "path": "published/conversation-archive/0.1.1/conversation-archive-0.1.1.zip",
+  "sha256": "73b89ba059beec04836c3d3d651356f73d253d2976dcf2f036a1be59c949e4ea",
+  "size": 13585,
+  "status": "builtin-snapshot",
+  "compatibility": "内置快照；需要对话归档后端、数据库和 native v1，清单下限 .204。",
+  "source": {
+    "repository": "https://github.com/moeacgx/maolaonewapi",
+    "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+    "path": "extension/builtin/conversation-archive",
+    "working_tree": false
+  },
+  "verification": "清单、双模板资源、ZIP 安装器验证；完整行为依赖宿主。"
+}

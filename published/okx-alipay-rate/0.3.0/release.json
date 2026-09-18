@@ -1,0 +1,24 @@
+{
+  "id": "okx-alipay-rate",
+  "name": "OKX 支付宝汇率",
+  "version": "0.3.0",
+  "description": "提供 OKPay 可接入的 OKX 支付宝档位汇率，并支持模块内配置上浮下浮。",
+  "host": {
+    "min": "v1.0.0-rc.10.1.10.155"
+  },
+  "capabilities": [
+    "ui.native"
+  ],
+  "path": "published/okx-alipay-rate/0.3.0/okx-alipay-rate-0.3.0.zip",
+  "sha256": "f99c05fcfe30a68e79122deb587e9e07a0405bf2121c00f0388c0bb9f4d704de",
+  "size": 12995,
+  "status": "builtin-snapshot",
+  "compatibility": "内置快照；需要报价/配置与 OKPay 宿主支持和 native v1；清单 .155 不能代表旧 SDK 支持。",
+  "source": {
+    "repository": "https://github.com/moeacgx/maolaonewapi",
+    "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+    "path": "extension/builtin/okx-alipay-rate",
+    "working_tree": false
+  },
+  "verification": "清单、双模板资源、ZIP 安装器验证；完整行为依赖宿主。"
+}

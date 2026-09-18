@@ -1,0 +1,27 @@
+{
+  "id": "upstream-model-guard",
+  "name": "上游模型校验",
+  "version": "0.2.0",
+  "description": "按分组和请求模型校验上游响应模型，不匹配时关闭整条渠道并联动通知中心。",
+  "host": {
+    "min": "v1.0.0-rc.10.1.10.326"
+  },
+  "capabilities": [
+    "ui.native",
+    "notification.events.publish",
+    "channel.upstream-model-guard",
+    "channel.upstream-model-guard-tolerance"
+  ],
+  "path": "published/upstream-model-guard/0.2.0/upstream-model-guard-0.2.0.zip",
+  "sha256": "2704983909b47c76788a0504f008a809c7eb56e7a494f661222d90d5dc52cb3b",
+  "size": 31425,
+  "status": "requires-host-upgrade",
+  "compatibility": "外置开发版；需要 guard 与 tolerance 两能力及数据库迁移，正式 .326/.326.guard.1 不支持本版容错。",
+  "source": {
+    "repository": "https://github.com/moeacgx/maolaonewapi",
+    "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+    "path": "extensions/upstream-model-guard",
+    "working_tree": true
+  },
+  "verification": "本地 Go/双模板回归、旧 SQLite 升级与真实 ZIP 上传验证；尚未生产部署。"
+}

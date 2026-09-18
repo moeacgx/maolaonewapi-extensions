@@ -1,0 +1,106 @@
+{
+  "catalogVersion": 1,
+  "name": "MaoLaoNewAPI extensions",
+  "purpose": "extension-catalog",
+  "modules": [
+    {
+      "id": "channel-quality",
+      "name": "渠道可观测性中心",
+      "version": "0.4.1",
+      "description": "面向运维的分组、模型、渠道多时间窗稳定性与失败链路分析中心。",
+      "host": {
+        "min": "v1.0.0-rc.10.1.10.204"
+      },
+      "capabilities": [
+        "ui.native"
+      ],
+      "path": "published/channel-quality/0.4.1/channel-quality-0.4.1.zip",
+      "sha256": "5e62e49b78cfefaa4895173e376bf1cc5a8071db82e3f788ce5eede1a7379675",
+      "size": 77882,
+      "status": "builtin-snapshot",
+      "compatibility": "内置快照；需要 MaoLaoNewAPI 渠道可观测性接口及 native v1，清单下限 .204。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi",
+        "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+        "path": "extension/builtin/channel-quality",
+        "working_tree": false
+      },
+      "verification": "清单、双模板资源、ZIP 安装器验证；完整行为依赖宿主。"
+    },
+    {
+      "id": "conversation-archive",
+      "name": "对话归档",
+      "version": "0.1.1",
+      "description": "按分组和用户筛选保存清洗后的对话，并在线预览用于安全排查。",
+      "host": {
+        "min": "v1.0.0-rc.10.1.10.204"
+      },
+      "capabilities": [
+        "ui.native"
+      ],
+      "path": "published/conversation-archive/0.1.1/conversation-archive-0.1.1.zip",
+      "sha256": "73b89ba059beec04836c3d3d651356f73d253d2976dcf2f036a1be59c949e4ea",
+      "size": 13585,
+      "status": "builtin-snapshot",
+      "compatibility": "内置快照；需要对话归档后端、数据库和 native v1，清单下限 .204。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi",
+        "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+        "path": "extension/builtin/conversation-archive",
+        "working_tree": false
+      },
+      "verification": "清单、双模板资源、ZIP 安装器验证；完整行为依赖宿主。"
+    },
+    {
+      "id": "okx-alipay-rate",
+      "name": "OKX 支付宝汇率",
+      "version": "0.3.0",
+      "description": "提供 OKPay 可接入的 OKX 支付宝档位汇率，并支持模块内配置上浮下浮。",
+      "host": {
+        "min": "v1.0.0-rc.10.1.10.155"
+      },
+      "capabilities": [
+        "ui.native"
+      ],
+      "path": "published/okx-alipay-rate/0.3.0/okx-alipay-rate-0.3.0.zip",
+      "sha256": "f99c05fcfe30a68e79122deb587e9e07a0405bf2121c00f0388c0bb9f4d704de",
+      "size": 12995,
+      "status": "builtin-snapshot",
+      "compatibility": "内置快照；需要报价/配置与 OKPay 宿主支持和 native v1；清单 .155 不能代表旧 SDK 支持。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi",
+        "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+        "path": "extension/builtin/okx-alipay-rate",
+        "working_tree": false
+      },
+      "verification": "清单、双模板资源、ZIP 安装器验证；完整行为依赖宿主。"
+    },
+    {
+      "id": "upstream-model-guard",
+      "name": "上游模型校验",
+      "version": "0.2.0",
+      "description": "按分组和请求模型校验上游响应模型，不匹配时关闭整条渠道并联动通知中心。",
+      "host": {
+        "min": "v1.0.0-rc.10.1.10.326"
+      },
+      "capabilities": [
+        "ui.native",
+        "notification.events.publish",
+        "channel.upstream-model-guard",
+        "channel.upstream-model-guard-tolerance"
+      ],
+      "path": "published/upstream-model-guard/0.2.0/upstream-model-guard-0.2.0.zip",
+      "sha256": "2704983909b47c76788a0504f008a809c7eb56e7a494f661222d90d5dc52cb3b",
+      "size": 31425,
+      "status": "requires-host-upgrade",
+      "compatibility": "外置开发版；需要 guard 与 tolerance 两能力及数据库迁移，正式 .326/.326.guard.1 不支持本版容错。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi",
+        "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+        "path": "extensions/upstream-model-guard",
+        "working_tree": true
+      },
+      "verification": "本地 Go/双模板回归、旧 SQLite 升级与真实 ZIP 上传验证；尚未生产部署。"
+    }
+  ]
+}

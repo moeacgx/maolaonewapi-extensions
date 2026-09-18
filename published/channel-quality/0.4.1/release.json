@@ -1,0 +1,24 @@
+{
+  "id": "channel-quality",
+  "name": "渠道可观测性中心",
+  "version": "0.4.1",
+  "description": "面向运维的分组、模型、渠道多时间窗稳定性与失败链路分析中心。",
+  "host": {
+    "min": "v1.0.0-rc.10.1.10.204"
+  },
+  "capabilities": [
+    "ui.native"
+  ],
+  "path": "published/channel-quality/0.4.1/channel-quality-0.4.1.zip",
+  "sha256": "5e62e49b78cfefaa4895173e376bf1cc5a8071db82e3f788ce5eede1a7379675",
+  "size": 77882,
+  "status": "builtin-snapshot",
+  "compatibility": "内置快照；需要 MaoLaoNewAPI 渠道可观测性接口及 native v1，清单下限 .204。",
+  "source": {
+    "repository": "https://github.com/moeacgx/maolaonewapi",
+    "base_commit": "30d23d6233fadd2574f39a405098fb63048f95a4",
+    "path": "extension/builtin/channel-quality",
+    "working_tree": false
+  },
+  "verification": "清单、双模板资源、ZIP 安装器验证；完整行为依赖宿主。"
+}

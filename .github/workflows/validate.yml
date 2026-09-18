@@ -1,0 +1,22 @@
+name: Validate extension packages
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          fetch-depth: 0
+      - name: Check catalog and packages
+        run: python3 scripts/validate.py
+      - name: Preserve published versions
+        env:
+          PREVIOUS: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$PREVIOUS" ] && [ "$PREVIOUS" != "0000000000000000000000000000000000000000" ]; then
+            python3 scripts/validate.py "$PREVIOUS"
+          fi
