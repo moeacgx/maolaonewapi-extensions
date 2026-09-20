@@ -101,6 +101,33 @@
         "working_tree": true
       },
       "verification": "本地 Go/双模板回归、旧 SQLite 升级与真实 ZIP 上传验证；尚未生产部署。"
+    },
+    {
+      "id": "upstream-model-guard",
+      "name": "上游模型校验",
+      "version": "0.2.1",
+      "description": "按分组和请求模型校验上游响应模型，不匹配时关闭整条渠道并联动通知中心。",
+      "host": {
+        "min": "v1.0.0-rc.10.1.10.326"
+      },
+      "capabilities": [
+        "ui.native",
+        "notification.events.publish",
+        "channel.upstream-model-guard",
+        "channel.upstream-model-guard-tolerance"
+      ],
+      "path": "published/upstream-model-guard/0.2.1/upstream-model-guard-0.2.1.zip",
+      "sha256": "90c00c1ff1955e4f346e2ab1f19398def5bb3c1898b622af4d890a0bd02863e4",
+      "size": 34595,
+      "status": "requires-host-capabilities",
+      "compatibility": "增加双模板渠道 ID 白名单输入；需要 guard 与 tolerance 两项宿主能力，现有 .329 支持，无新增迁移。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi-extensions",
+        "base_commit": "8fe51f44fb9a7fcc77df66179e3042dd9adf276a",
+        "path": "modules/upstream-model-guard",
+        "working_tree": true
+      },
+      "verification": "Default 与 Classic 原生页面回归、ID 校验与去重、保存契约、ZIP 及历史包不可变校验；未安装到生产。"
     }
   ]
 }

@@ -39,6 +39,17 @@
     }
   },
   "upstream-model-guard": {
+    "0.2.1": {
+      "status": "requires-host-capabilities",
+      "compatibility": "增加双模板渠道 ID 白名单输入；需要 guard 与 tolerance 两项宿主能力，现有 .329 支持，无新增迁移。",
+      "source": {
+        "repository": "https://github.com/moeacgx/maolaonewapi-extensions",
+        "base_commit": "8fe51f44fb9a7fcc77df66179e3042dd9adf276a",
+        "path": "modules/upstream-model-guard",
+        "working_tree": true
+      },
+      "verification": "Default 与 Classic 原生页面回归、ID 校验与去重、保存契约、ZIP 及历史包不可变校验；未安装到生产。"
+    },
     "0.2.0": {
       "status": "requires-host-upgrade",
       "compatibility": "外置开发版；需要 guard 与 tolerance 两能力及数据库迁移，正式 .326/.326.guard.1 不支持本版容错。",
